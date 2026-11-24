@@ -1,0 +1,29 @@
+# Piedmont Club (Invited member portal) — template for the configurable JSON provider.
+#
+# To finish it (one-time, ~5 minutes):
+#   1. Sign in at https://members.invitedclubs.com and open the tee sheet for any date.
+#   2. DevTools → Network → filter "Fetch/XHR" → find the request whose response lists the times.
+#   3. Put its URL below (use {date}, {date_us} or {course_id} where they vary), and map the fields.
+#   4. Put the session cookie in an env var / GitHub secret — never in this file:
+#        export PIEDMONT_SESSION_COOKIE='ASPSESSIONID...=...; other=...'
+#
+# The values below are PLACEHOLDERS: the real endpoint is only visible while signed in.
+kind: json
+timezone: America/New_York
+courses:
+  - id: piedmont
+    name: Piedmont Club
+    lat: 38.8432
+    lon: -77.6418
+request:
+  url: "https://members.invitedclubs.com/REPLACE/WITH/TEE-SHEET/ENDPOINT?date={date_us}"
+  headers:
+    Cookie: "${PIEDMONT_SESSION_COOKIE}"
+response:
+  items: "REPLACE.path.to.list"     # dotted path to the array of slots; '*' flattens nested lists
+  start: "REPLACE_startTime"         # ISO time, or set start_format, e.g. "%I:%M %p"
+  # start_format: "%I:%M %p"
+  spots: "REPLACE_openSlots"         # players that can still join
+  # price_dollars: "fee"             # members usually have no green fee; omit
+  default_holes: 18
+booking_url: "https://members.invitedclubs.com/"

@@ -1,0 +1,10 @@
+[
+  {"id": 4595, "courseId": "54f14cf20c8ad60378b03119", "name": "Laurel Hill Golf Club", "timeZone": "America/New_York", "locality": "Lorton", "location": [-77.246579, 38.71804], "isSimulator": false},
+  {"id": 3485, "courseId": "5e43088775a12b0100190df2", "name": "Burke Lake Golf Center", "timeZone": "America/New_York", "locality": "Fairfax Station", "location": [-77.309644, 38.7651695], "isSimulator": false},
+  {"id": 7756, "courseId": "54f14e540c8ad60378b04dba", "name": "Twin Lakes Golf Course - Oaks Course", "timeZone": "America/New_York", "locality": "Clifton", "location": [-77.4131382, 38.8213126], "isSimulator": false},
+  {"id": 7743, "courseId": "5e3d7968ce07ad0100ad93d0", "name": "Twin Lakes Golf Course - Lakes Course", "timeZone": "America/New_York", "locality": "Clifton", "location": [-77.4131382, 38.8213126], "isSimulator": false},
+  {"id": 17001, "courseId": "5e1f5cd601ca180100c0acfc", "name": "Jefferson District Golf Course", "timeZone": "America/New_York", "locality": "Falls Church", "location": [-77.2166465, 38.8766896], "isSimulator": false},
+  {"id": 17002, "courseId": "5e1f5e074cabb501004d48dd", "name": "Oakmont Golf Center", "timeZone": "America/New_York", "locality": "Oakton", "location": [-77.3143646, 38.8751903], "isSimulator": false},
+  {"id": 17005, "courseId": "5e1f5fa2c775fe0100e756fb", "name": "Pinecrest Golf Course", "timeZone": "America/New_York", "locality": "Alexandria", "location": [-77.163368, 38.823591], "isSimulator": false},
+  {"id": 7742, "courseId": "54f14e530c8ad60378b04dad", "name": "Greendale Golf Course", "timeZone": "America/New_York", "locality": "Alexandria", "location": [-77.11998, 38.78298], "isSimulator": false}
+]

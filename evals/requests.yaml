@@ -1,0 +1,46 @@
+# Plain-English watch requests, graded against the fields a correct rule must have.
+# "Today" for every case is Tuesday 2026-11-24 (America/New_York).
+# Fairfax course ids: 4595 Laurel Hill · 3485 Burke Lake · 7756 Twin Lakes Oaks · 7743 Twin Lakes Lakes
+#                     17001 Jefferson District · 17002 Oakmont · 17005 Pinecrest · 7742 Greendale
+# `dates`  = the concrete dates the rule must watch in the next 14 days
+# `days`   = for recurring requests, the weekday set (plus a minimum horizon when the request implies one)
+today: "2026-11-24"
+cases:
+  - id: sat_foursome_twin_lakes
+    request: "Saturday morning before 10 for a foursome at Twin Lakes"
+    expect: {dates: ["2026-11-28"], latest: "10:00", players: 4, courses: ["7756", "7743"]}
+  - id: every_sunday_afternoon
+    request: "Every Sunday afternoon, 2 players, under $60, any course"
+    expect: {days: [sun], earliest: "12:00", latest: "17:00", players: 2, max_price: 60,
+             courses: ["4595", "3485", "7756", "7743", "17001", "17002", "17005", "7742"]}
+  - id: this_weekend_buddies
+    request: "this weekend, me and 3 buddies, Laurel Hill, anytime before noon"
+    expect: {dates: ["2026-11-28", "2026-11-29"], latest: "12:00", players: 4, courses: ["4595"]}
+  - id: thanksgiving_walk
+    request: "Thanksgiving morning, just me, walking, 18 holes at Burke Lake"
+    expect: {dates: ["2026-11-26"], players: 1, walking: walk, holes: 18, courses: ["3485"]}
+  - id: weekday_nine_clifton
+    request: "9 holes after work on weekdays for 2, any course in Clifton"
+    expect: {days: [mon, tue, wed, thu, fri], holes: 9, players: 2, courses: ["7756", "7743"]}
+  - id: dec4_threesome
+    request: "Friday Dec 4 after 2pm, threesome, Pinecrest or Greendale, max $45"
+    expect: {dates: ["2026-12-04"], earliest: "14:00", players: 3, max_price: 45, courses: ["17005", "7742"]}
+  - id: twilight_saturdays_ride
+    request: "Twilight rounds at Laurel Hill on Saturdays, 2 of us, riding"
+    expect: {days: [sat], earliest: "15:00", players: 2, walking: ride, courses: ["4595"]}
+  - id: dec5_window
+    request: "Any tee time for 4 at Jefferson District or Oakmont between 8 and 10am on December 5th"
+    expect: {dates: ["2026-12-05"], earliest: "08:00", latest: "10:00", players: 4, courses: ["17001", "17002"]}
+  - id: black_friday_son
+    request: "Early morning golf with my son on Black Friday, Laurel Hill, under 80 bucks"
+    expect: {dates: ["2026-11-27"], latest: "09:00", players: 2, max_price: 80, courses: ["4595"]}
+  - id: dec6_solo_nine
+    request: "Sunday Dec 6, Burke Lake, 9 holes, solo"
+    expect: {dates: ["2026-12-06"], holes: 9, players: 1, courses: ["3485"]}
+  - id: two_weeks_of_weekends
+    request: "Weekends over the next two weeks, foursome, Twin Lakes Oaks course only, 7 to 9 am"
+    expect: {days: [sat, sun], min_horizon: 12, earliest: "07:00", latest: "09:00", players: 4, courses: ["7756"]}
+  - id: tuesday_first
+    request: "Tuesday the 1st, 1pm-3pm, two players at any Fairfax course"
+    expect: {dates: ["2026-12-01"], earliest: "13:00", latest: "15:00", players: 2,
+             courses: ["4595", "3485", "7756", "7743", "17001", "17002", "17005", "7742"]}

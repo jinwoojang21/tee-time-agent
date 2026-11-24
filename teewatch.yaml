@@ -1,0 +1,31 @@
+# tee-time-agent configuration. Add watches with `teewatch add "..."` (Claude) or edit by hand.
+timezone: America/New_York
+
+providers:
+  # Fairfax County Park Authority public courses (TeeItUp). No login needed to read tee times.
+  fairfax:
+    kind: teeitup
+    alias: fairfax-county-mco
+  # Private club via its logged-in JSON endpoint. Copy providers/piedmont.example.yaml to
+  # providers/piedmont.yaml, fill it in, then uncomment:
+  # piedmont:
+  #   file: providers/piedmont.yaml
+
+watches:
+  - name: weekend-mornings
+    provider: fairfax
+    courses: ["7756", "7743", "4595"]   # Twin Lakes Oaks, Twin Lakes Lakes, Laurel Hill
+    days: [sat, sun]
+    earliest: "07:00"
+    latest: "11:00"
+    players: 4
+    max_price: 75
+  - name: weekday-twilight
+    provider: fairfax
+    courses: ["7756", "7743"]
+    days: [mon, tue, wed, thu, fri]
+    horizon_days: 3
+    earliest: "15:00"
+    latest: "17:30"
+    players: 2
+    holes: 9

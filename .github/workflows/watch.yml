@@ -1,0 +1,43 @@
+name: watch
+
+# Checks the tee sheets every 15 minutes from 6 AM to 9 PM Eastern (cron is UTC) and pushes new
+# matches to your phone via ntfy. No LLM calls. Needs the NTFY_TOPIC repo secret.
+# Note: GitHub may delay scheduled runs by a few minutes, and pauses schedules in repos with no
+# commits for 60 days. Re-enable from the Actions tab if that happens.
+on:
+  schedule:
+    - cron: "*/15 0-2,11-23 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: watch
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -e .
+      - name: Restore alert history
+        uses: actions/cache/restore@v4
+        with:
+          path: .teewatch
+          key: teewatch-state-${{ github.run_id }}
+          restore-keys: teewatch-state-
+      - name: Check tee sheets
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+          PIEDMONT_SESSION_COOKIE: ${{ secrets.PIEDMONT_SESSION_COOKIE }}
+        run: teewatch check
+      - name: Save alert history
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .teewatch
+          key: teewatch-state-${{ github.run_id }}

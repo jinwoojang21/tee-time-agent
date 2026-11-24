@@ -1,0 +1,39 @@
+[
+  {"courseId": "54f14cf20c8ad60378b03119",
+   "dayInfo": {"dawn": "2026-11-28T11:37:00.000Z", "sunrise": "2026-11-28T12:06:00.000Z", "sunset": "2026-11-28T21:47:00.000Z", "dusk": "2026-11-28T22:19:00.000Z"},
+   "teetimes": [
+    {"courseId": "54f14cf20c8ad60378b03119", "teetime": "2026-11-28T14:02:00.000Z", "minPlayers": 1, "maxPlayers": 1, "bookedPlayers": 3,
+     "rates": [{"_id": 387608263, "name": "18 Holes", "holes": 18, "allowedPlayers": [1], "greenFeeCart": 9900, "golfnow": {"TTTeeTimeId": 387608263, "GolfCourseId": 135820, "GolfFacilityId": 4595}}]},
+    {"courseId": "54f14cf20c8ad60378b03119", "teetime": "2026-11-28T18:30:00.000Z", "minPlayers": 1, "maxPlayers": 2, "bookedPlayers": 2,
+     "rates": [{"_id": 382852505, "name": "18 Holes", "holes": 18, "allowedPlayers": [1, 2], "greenFeeCart": 6500, "golfnow": {"TTTeeTimeId": 382852505, "GolfCourseId": 135820, "GolfFacilityId": 4595}}]},
+    {"courseId": "54f14cf20c8ad60378b03119", "teetime": "2026-11-28T18:40:00.000Z", "minPlayers": 1, "maxPlayers": 4, "bookedPlayers": 0,
+     "rates": [{"_id": 382852504, "name": "18 Holes", "holes": 18, "allowedPlayers": [1, 2, 3, 4], "greenFeeCart": 6500, "golfnow": {"TTTeeTimeId": 382852504, "GolfCourseId": 135820, "GolfFacilityId": 4595}}]},
+    {"courseId": "54f14cf20c8ad60378b03119", "teetime": "2026-11-28T20:40:00.000Z", "minPlayers": 1, "maxPlayers": 4, "bookedPlayers": 0,
+     "rates": [{"_id": 382852492, "name": "18 Holes", "holes": 18, "allowedPlayers": [1, 2, 3, 4], "greenFeeCart": 6500, "golfnow": {"TTTeeTimeId": 382852492, "GolfCourseId": 135820, "GolfFacilityId": 4595}}]}
+   ]},
+  {"courseId": "54f14e540c8ad60378b04dba",
+   "dayInfo": {"dawn": "2026-11-28T11:38:00.000Z", "sunrise": "2026-11-28T12:07:00.000Z", "sunset": "2026-11-28T21:47:00.000Z", "dusk": "2026-11-28T22:19:00.000Z"},
+   "teetimes": [
+    {"courseId": "54f14e540c8ad60378b04dba", "teetime": "2026-11-28T18:15:00.000Z", "minPlayers": 1, "maxPlayers": 1, "bookedPlayers": 3,
+     "rates": [{"_id": 382844868, "name": "18 Holes", "holes": 18, "allowedPlayers": [1], "greenFeeWalking": 4900, "golfnow": {"TTTeeTimeId": 382844868, "GolfCourseId": 135901, "GolfFacilityId": 7756}},
+               {"_id": 382854219, "name": "18 Holes", "holes": 18, "allowedPlayers": [1], "greenFeeCart": 7000, "golfnow": {"TTTeeTimeId": 382854219, "GolfCourseId": 149765, "GolfFacilityId": 7756}}]},
+    {"courseId": "54f14e540c8ad60378b04dba", "teetime": "2026-11-28T18:55:00.000Z", "minPlayers": 1, "maxPlayers": 4, "bookedPlayers": 0,
+     "rates": [{"_id": 382844865, "name": "18 Holes", "holes": 18, "allowedPlayers": [1, 2, 3, 4], "greenFeeWalking": 4900, "golfnow": {"TTTeeTimeId": 382844865, "GolfCourseId": 135901, "GolfFacilityId": 7756}},
+               {"_id": 382821053, "name": "9 Holes", "holes": 9, "allowedPlayers": [1, 2, 3, 4], "greenFeeCart": 5500, "golfnow": {"TTTeeTimeId": 382821053, "GolfCourseId": 29349, "GolfFacilityId": 7756}},
+               {"_id": 382844909, "name": "9 Holes", "holes": 9, "allowedPlayers": [1, 2, 3, 4], "greenFeeWalking": 3900, "golfnow": {"TTTeeTimeId": 382844909, "GolfCourseId": 141161, "GolfFacilityId": 7756}},
+               {"_id": 382854216, "name": "18 Holes", "holes": 18, "allowedPlayers": [1, 2, 3, 4], "greenFeeCart": 7000, "golfnow": {"TTTeeTimeId": 382854216, "GolfCourseId": 149765, "GolfFacilityId": 7756}}]}
+   ]},
+  {"courseId": "5e3d7968ce07ad0100ad93d0",
+   "dayInfo": {"dawn": "2026-11-28T11:38:00.000Z", "sunrise": "2026-11-28T12:07:00.000Z", "sunset": "2026-11-28T21:47:00.000Z", "dusk": "2026-11-28T22:19:00.000Z"},
+   "teetimes": [
+    {"courseId": "5e3d7968ce07ad0100ad93d0", "teetime": "2026-11-28T18:20:00.000Z", "minPlayers": 1, "maxPlayers": 2, "bookedPlayers": 2,
+     "rates": [{"_id": 382940171, "name": "9 Holes", "holes": 9, "allowedPlayers": [1, 2], "greenFeeCart": 5500, "golfnow": {"TTTeeTimeId": 382940171, "GolfCourseId": 149742, "GolfFacilityId": 7743}},
+               {"_id": 382942284, "name": "18 Holes", "holes": 18, "allowedPlayers": [1, 2], "greenFeeCart": 7000, "golfnow": {"TTTeeTimeId": 382942284, "GolfCourseId": 149764, "GolfFacilityId": 7743}},
+               {"_id": 382938193, "name": "18 Holes", "holes": 18, "allowedPlayers": [1, 2], "greenFeeWalking": 4900, "golfnow": {"TTTeeTimeId": 382938193, "GolfCourseId": 135908, "GolfFacilityId": 7743}}]},
+    {"courseId": "5e3d7968ce07ad0100ad93d0", "teetime": "2026-11-28T19:10:00.000Z", "minPlayers": 1, "maxPlayers": 4, "bookedPlayers": 0,
+     "rates": [{"_id": 382939644, "name": "9 Holes", "holes": 9, "allowedPlayers": [1, 2, 3, 4], "greenFeeWalking": 3900, "golfnow": {"TTTeeTimeId": 382939644, "GolfCourseId": 141164, "GolfFacilityId": 7743}},
+               {"_id": 382940167, "name": "9 Holes", "holes": 9, "allowedPlayers": [1, 2, 3, 4], "greenFeeCart": 5500, "golfnow": {"TTTeeTimeId": 382940167, "GolfCourseId": 149742, "GolfFacilityId": 7743}},
+               {"_id": 382942280, "name": "18 Holes", "holes": 18, "allowedPlayers": [1, 2, 3, 4], "greenFeeCart": 7000, "golfnow": {"TTTeeTimeId": 382942280, "GolfCourseId": 149764, "GolfFacilityId": 7743}},
+               {"_id": 382938189, "name": "18 Holes", "holes": 18, "allowedPlayers": [1, 2, 3, 4], "greenFeeWalking": 4900, "golfnow": {"TTTeeTimeId": 382938189, "GolfCourseId": 135908, "GolfFacilityId": 7743}}]}
+   ]}
+]

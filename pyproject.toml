@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tee-time-agent"
+version = "0.1.0"
+description = "Watches public tee sheets and pings your phone when a matching tee time opens; Claude turns plain English into watch rules."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "Justin Jang" }]
+dependencies = ["pyyaml>=6", "anthropic>=0.40"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+teewatch = "teetime.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 115
+
+[tool.ruff.lint]
+# Explicit rule set so results don't shift between ruff releases.
+select = ["E", "F", "W", "I", "UP"]
