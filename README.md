@@ -106,8 +106,12 @@ teewatch evals --agent claude     # manual CI job
 
 | parser | requests fully correct | fields correct |
 |---|---|---|
+| **Claude** (`claude-sonnet-5-5`) | **12/12** | **58/58** |
 | Regex baseline | 7/12 | 52/58 |
-| Claude | _pending first run_ | |
+
+Claude used about 2–3 tool calls and roughly 3.5k input / 0.4k output tokens per request (12 requests: 42.7k / 4.4k
+tokens, 33 tool calls). It resolved "Black Friday", "Thanksgiving" and "Tuesday the 1st" with the
+calendar tool, counted "me and 3 buddies" as 4, and set a 12+ day horizon for "over the next two weeks".
 
 The regex parser misses "me and 3 buddies", "with my son", Thanksgiving, "early morning" and "over the next two weeks".
 
