@@ -8,6 +8,11 @@ on:
   schedule:
     - cron: "*/15 0-2,11-23 * * *"
   workflow_dispatch:
+    inputs:
+      test_alert:
+        description: "Send a sample notification instead of checking"
+        type: boolean
+        default: false
 
 concurrency:
   group: watch
@@ -30,7 +35,13 @@ jobs:
           path: .teewatch
           key: teewatch-state-${{ github.run_id }}
           restore-keys: teewatch-state-
+      - name: Send test alert
+        if: ${{ inputs.test_alert }}
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: teewatch test-alert
       - name: Check tee sheets
+        if: ${{ !inputs.test_alert }}
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
           PIEDMONT_SESSION_COOKIE: ${{ secrets.PIEDMONT_SESSION_COOKIE }}
